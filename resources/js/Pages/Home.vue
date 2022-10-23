@@ -1,12 +1,16 @@
 <script>
+    import Layout from '../Shared/Layout.vue';
+
     export default {
+        components: {
+            Layout
+        },
         props: ['title']
     }
 </script>
 
 <template>
-    <div class="mx-center text-center m-5">
+    <Layout title="Inertia - Laravel">
         <h1>{{ title }}</h1>
-        <Link href="/about" as="button">About</Link>
-    </div>
+    </Layout>
 </template>
