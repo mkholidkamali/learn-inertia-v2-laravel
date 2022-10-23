@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -35,5 +36,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
+// Pages
 Route::get('/home', [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about']);
+// User
+Route::get('/users', [UserController::class, 'index']);
